@@ -1,5 +1,6 @@
 import { test } from '@playwright/test';
 import {decryptEnvFile, encryptEnvFile} from "../utils/EncryptEnvFile";
+import {convertCsvFileToJsonFile} from "../utils/CsvToJsonUtil";
 
 test.describe.skip('util functions',()=>{
     test.skip('env test', async({page})=>{
@@ -17,11 +18,17 @@ test.describe.skip('util functions',()=>{
         //decryptEnvFile();
     });
 
-    test.skip('encrypt env', async ({page})=>{
+    test('encrypt env', async ({page})=>{
         encryptEnvFile();
     })
 
     test.skip('decrypt env', async ({page})=>{
         decryptEnvFile();
     })
+
+    //Convert CSV files to JSON
+    test.skip("csv to json", async({page})=>{
+        convertCsvFileToJsonFile("data.csv","datademo.json")
+    })
+
 })

@@ -1,13 +1,30 @@
-import { Page, expect } from '@playwright/test';
+import {Page, expect, Locator} from '@playwright/test';
 import logger from "../utils/LoggerUtil";
 import exp = require("node:constants");
+import UserManagementPage from "./Admin/UserManagementPage";
+import EmployeeInformationPage from "./PIM/EmployeeInformationPage";
 
 export default class HomePage{
 
-    private readonly expectedPageTitle = "Swag Labs";
+    private readonly page: Page;
+    private readonly adminMenuItem: Locator;
+    private readonly pimMenuItem: Locator;
+    private readonly expectedPageTitle = "OrangeHRM";
 
-    constructor(private page: Page){
+    constructor(page: Page){
+        this.page = page;
+        this.adminMenuItem = page.locator('//a[contains(@class, "oxd-main-menu-item") and .//span[text()="Admin"]]');
+        this.pimMenuItem = page.locator('//a[contains(@class, "oxd-main-menu-item") and .//span[text()="PIM"]]');
+    }
 
+    async clickAdminMenuItem(){
+        await this.adminMenuItem.click();
+        return new UserManagementPage(this.page);
+    }
+
+    async clickPimMenuItem(){
+        await this.pimMenuItem.click();
+        return new EmployeeInformationPage(this.page);
     }
 
     async expectServiceTitleToBeVisible(){

@@ -1,0 +1,12 @@
+[
+  {
+    "firstName": "red",
+    "MiddleName": "blue",
+    "LastName": "green"
+  },
+  {
+    "firstName": "apple",
+    "MiddleName": "mango",
+    "LastName": "banana"
+  }
+]

@@ -1,4 +1,4 @@
-2024-06-29T11:47:54+05:30 [error]: Page title does not match the expected title: Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+2024-06-29T12:56:11+05:30 [error]: Error clicking login button: Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  [2m- waiting for getByRole('button', { name: /submit/i })[22m
 
-Expected: [32m"Swag Labs[7ms[27m"[39m
-Received: [31m"Swag Labs"[39m

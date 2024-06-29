@@ -16,6 +16,7 @@
     "crypto-js": "^4.2.0",
     "dotenv": "^16.4.5",
     "moment-timezone": "^0.5.45",
+    "typescript": "^5.5.2",
     "winston": "^3.13.0"
   }
 }
