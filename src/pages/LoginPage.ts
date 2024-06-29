@@ -1,10 +1,10 @@
-import { Page } from '@playwright/test';
+import {Page} from '@playwright/test';
 import HomePage from './HomePage';
 
 export default class LoginPage{
-    private readonly usernameInputSelector = '#username';
+    private readonly usernameInputSelector = '#user-name';
     private readonly passwordInputSelector = '#password';
-    private readonly loginButtonSelector = '#Login';
+    private readonly loginButtonSelector = '#login-button';
 
     constructor(private page: Page){
         
@@ -28,7 +28,6 @@ export default class LoginPage{
             throw error;
         })
 
-        const homePage = new HomePage(this.page);
-        return homePage;
+        return new HomePage(this.page);
     }
 }
