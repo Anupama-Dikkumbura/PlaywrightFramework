@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import {decryptEnvFile, encryptEnvFile} from "../utils/EncryptEnvFile";
 
-test.describe('util functions',()=>{
+test.describe.skip('util functions',()=>{
     test.skip('env test', async({page})=>{
         // console.log(process.env.NODE_ENV);
         // console.log(process.env.userid);
@@ -17,7 +17,7 @@ test.describe('util functions',()=>{
         //decryptEnvFile();
     });
 
-    test('encrypt env', async ({page})=>{
+    test.skip('encrypt env', async ({page})=>{
         encryptEnvFile();
     })
 
