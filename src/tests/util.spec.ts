@@ -1,8 +1,9 @@
 import { test } from '@playwright/test';
 import {decryptEnvFile, encryptEnvFile} from "../utils/EncryptEnvFile";
 import {convertCsvFileToJsonFile} from "../utils/CsvToJsonUtil";
+import {exportToCsv, exportToJson, generateTestData} from "../utils/FakerDataUtil";
 
-test.describe.skip('util functions',()=>{
+test.describe('util functions',()=>{
     test.skip('env test', async({page})=>{
         // console.log(process.env.NODE_ENV);
         // console.log(process.env.userid);
@@ -18,7 +19,7 @@ test.describe.skip('util functions',()=>{
         //decryptEnvFile();
     });
 
-    test('encrypt env', async ({page})=>{
+    test.skip('encrypt env', async ({page})=>{
         encryptEnvFile();
     })
 
@@ -29,6 +30,17 @@ test.describe.skip('util functions',()=>{
     //Convert CSV files to JSON
     test.skip("csv to json", async({page})=>{
         convertCsvFileToJsonFile("data.csv","datademo.json")
+    })
+
+    test('faker', async ({page})=>{
+        //Generate Test data
+        const testData = generateTestData(20);
+
+        //Export data to JSON file
+        exportToJson(testData, 'testData_en.json');
+
+        //Export data to CSV
+        exportToCsv(testData, 'testData_en.csv');
     })
 
 })
