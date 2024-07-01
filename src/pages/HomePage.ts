@@ -10,11 +10,13 @@ export default class HomePage{
     private readonly adminMenuItem: Locator;
     private readonly pimMenuItem: Locator;
     private readonly expectedPageTitle = "OrangeHRM";
+    private readonly expectedPageHeading: Locator;
 
     constructor(page: Page){
         this.page = page;
         this.adminMenuItem = page.locator('//a[contains(@class, "oxd-main-menu-item") and .//span[text()="Admin"]]');
         this.pimMenuItem = page.locator('//a[contains(@class, "oxd-main-menu-item") and .//span[text()="PIM"]]');
+        this.expectedPageHeading = page.locator('h6.oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module[data-v-7b563373][data-v-f0c5131f]');
     }
 
     async clickAdminMenuItem(){
@@ -25,6 +27,10 @@ export default class HomePage{
     async clickPimMenuItem(){
         await this.pimMenuItem.click();
         return new EmployeeInformationPage(this.page);
+    }
+
+    async expectedPageHeadingCheck (){
+        await expect(this.expectedPageHeading).toHaveText("Dashboard");
     }
 
     async expectServiceTitleToBeVisible(){
