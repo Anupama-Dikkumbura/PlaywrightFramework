@@ -32,7 +32,7 @@ test.describe.skip('util functions',()=>{
         convertCsvFileToJsonFile("data.csv","datademo.json")
     })
 
-    test('faker', async ({page})=>{
+    test.skip('faker', async ({page})=>{
         //Generate Test data
         const testData = generateTestData(20);
 

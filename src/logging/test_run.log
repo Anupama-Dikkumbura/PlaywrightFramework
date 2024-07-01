@@ -92,3 +92,13 @@ Call log:
 2024-06-29T17:35:24+05:30 [info]: Filled the middle name as Rakkitha
 2024-06-29T17:35:24+05:30 [info]: Filled the last name as Kholi
 2024-06-29T17:35:25+05:30 [info]: Clicked on Save button
+2024-07-01T20:18:43+05:30 [info]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2024-07-01T20:18:43+05:30 [info]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2024-07-01T20:20:38+05:30 [info]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2024-07-01T20:24:29+05:30 [info]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2024-07-01T20:24:30+05:30 [info]: Filled the username
+2024-07-01T20:24:30+05:30 [info]: Filled the password
+2024-07-01T20:24:32+05:30 [info]: Clicked login button
+2024-07-01T20:24:32+05:30 [info]: Page title retrieved: OrangeHRM
+2024-07-01T20:24:32+05:30 [info]: Page title matches the expected title.
+2024-07-01T20:24:32+05:30 [info]: Test for successful login is completed
