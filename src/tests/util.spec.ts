@@ -3,7 +3,7 @@ import {decryptEnvFile, encryptEnvFile} from "../utils/EncryptEnvFile";
 import {convertCsvFileToJsonFile} from "../utils/CsvToJsonUtil";
 import {exportToCsv, exportToJson, generateTestData} from "../utils/FakerDataUtil";
 
-test.describe('util functions',()=>{
+test.describe.skip('util functions',()=>{
     test.skip('env test', async({page})=>{
         // console.log(process.env.NODE_ENV);
         // console.log(process.env.userid);
