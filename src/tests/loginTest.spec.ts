@@ -5,7 +5,6 @@ import logger from "../utils/LoggerUtil";
 // @ts-ignore
 import employeeData from "../testdata/employees.json";
 import {convertCsvFileToJsonFile} from "../utils/CsvToJsonUtil";
-import {demoOutput} from "../utils/fakersample";
 
 for(const employee of employeeData){
     test.skip(`successful login ${employee.firstName}`, async({page})=>{
@@ -28,5 +27,5 @@ for(const employee of employeeData){
 }
 
 test('demo faker', async({page})=>{
-    console.log(demoOutput);
+    console.log("Test");
 })
