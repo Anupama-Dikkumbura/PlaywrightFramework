@@ -2,7 +2,10 @@
   "name": "framework",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

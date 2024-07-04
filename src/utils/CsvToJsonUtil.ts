@@ -1,15 +1,19 @@
 import * as fs from 'fs';
-let path = require('path');
+import path from 'path';
 
-const CSVToJSON = (data, delimiter=',')=>{
+const CSVToJSON = (data: string, delimiter=',')=>{
     const titles = data.slice(0, data.indexOf('\n')).split(delimiter);
     return data
         .slice(data.indexOf('\n')+1)
         .split('\n')
         .map((v)=>{
             const values = v.split(delimiter);
+            // @ts-ignore
+            // @ts-ignore
             return titles.reduce(
-                (obj, title, index)=>((obj[title.trim()] = values[index].trim()), obj),
+                (obj, title, index)=>(
+                    //@ts-ignore
+                    (obj[title.trim()] = values[index].trim()), obj),
                 {}
             );
         });
@@ -20,7 +24,7 @@ const CSVToJSON = (data, delimiter=',')=>{
 const testdataDir = path.resolve(__dirname,"../testdata");
 const csvFilePath = `${testdataDir}`;
 
-export const convertCsvFileToJsonFile = (csvFileName, jsonFileName, delimiter = ',')=>{
+export const convertCsvFileToJsonFile = (csvFileName: string, jsonFileName: string, delimiter = ',')=>{
     try{
         //Read the CSV file
         const csvData = fs.readFileSync(`${testdataDir}\\${csvFileName}`, 'utf8');
@@ -33,6 +37,7 @@ export const convertCsvFileToJsonFile = (csvFileName, jsonFileName, delimiter = 
 
         console.log(`Conversion completed. JSON data written to: ${testdataDir}\\${jsonFileName}`);
     }catch (error){
+        // @ts-ignore
         console.error('Error converting CSV to JSON: ', error.message);
     }
 }

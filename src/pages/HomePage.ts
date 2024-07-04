@@ -1,6 +1,5 @@
 import {Page, expect, Locator} from '@playwright/test';
 import logger from "../utils/LoggerUtil";
-import exp = require("node:constants");
 import UserManagementPage from "./Admin/UserManagementPage";
 import EmployeeInformationPage from "./PIM/EmployeeInformationPage";
 

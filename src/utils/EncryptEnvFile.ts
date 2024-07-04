@@ -1,6 +1,6 @@
-let CryptoJSUtil = require('crypto-js');
-let fs = require('fs');
-let path = require('path');
+import CryptoJSUtil from 'crypto-js';
+import fs from 'fs';
+import path from 'path';
 
 const SALT = process.env.SALT || "defaultSalt";
 //Go one level above(back to 'src')

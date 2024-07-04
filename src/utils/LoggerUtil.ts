@@ -1,6 +1,6 @@
-let winston = require('winston');
-let path = require('path');
-let moment = require('moment-timezone');
+import winston from 'winston';
+import path from 'path';
+import moment from 'moment-timezone';
 
 //Go to logging directory
 const loggingDir = path.resolve(__dirname,'../logging');
