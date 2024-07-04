@@ -115,3 +115,21 @@ Call log:
 2024-07-01T20:36:15+05:30 [info]: Page title retrieved: OrangeHRM
 2024-07-01T20:36:15+05:30 [info]: Page title matches the expected title.
 2024-07-01T20:36:16+05:30 [info]: Test for successful login is completed
+2024-07-04T07:51:00+05:30 [info]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2024-07-04T07:51:36+05:30 [info]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2024-07-04T07:51:37+05:30 [info]: Filled the username
+2024-07-04T07:51:37+05:30 [info]: Filled the password
+2024-07-04T07:51:38+05:30 [info]: Clicked login button
+2024-07-04T07:51:38+05:30 [info]: Page title retrieved: OrangeHRM
+2024-07-04T07:51:38+05:30 [info]: Page title matches the expected title.
+2024-07-04T07:51:39+05:30 [info]: Test for successful login is completed
+2024-07-04T07:52:25+05:30 [info]: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2024-07-04T07:52:26+05:30 [info]: Filled the username
+2024-07-04T07:52:26+05:30 [info]: Filled the password
+2024-07-04T07:52:27+05:30 [info]: Clicked login button
+2024-07-04T07:52:27+05:30 [info]: Page title retrieved: OrangeHRM
+2024-07-04T07:52:27+05:30 [info]: Page title matches the expected title.
+2024-07-04T07:52:28+05:30 [info]: Test for successful login is completed
+2024-07-04T07:59:43+05:30 [info]: Page title retrieved: OrangeHRM
+2024-07-04T07:59:43+05:30 [info]: Page title matches the expected title.
+2024-07-04T07:59:43+05:30 [info]: successfully logged in with the auth file

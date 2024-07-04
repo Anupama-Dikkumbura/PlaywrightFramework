@@ -26,16 +26,16 @@ import {convertCsvFileToJsonFile} from "../utils/CsvToJsonUtil";
 //     });
 // }
 
-test(`successful login`, async({page})=> {
-    const loginPage = new LoginPage(page);
-    await loginPage.navigateToLoginPage();
-    await loginPage.fillUsername(decrypt(process.env.userid!));
-    await loginPage.fillPassword(decrypt(process.env.password!));
-    const homePage = await loginPage.clickLoginButton();
-    await homePage.expectServiceTitleToBeVisible();
-    await homePage.expectedPageHeadingCheck();
-    logger.info('Test for successful login is completed');
-});
+// test(`successful login`, async({page})=> {
+//     const loginPage = new LoginPage(page);
+//     await loginPage.navigateToLoginPage();
+//     await loginPage.fillUsername(decrypt(process.env.userid!));
+//     await loginPage.fillPassword(decrypt(process.env.password!));
+//     const homePage = await loginPage.clickLoginButton();
+//     await homePage.expectServiceTitleToBeVisible();
+//     await homePage.expectedPageHeadingCheck();
+//     logger.info('Test for successful login is completed');
+// });
 
 test.skip('demo faker', async({page})=>{
     console.log("Test");
